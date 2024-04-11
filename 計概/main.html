@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>計概報告</title>
+        <link rel="stylesheet" href="CSS\main.css">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="JS\main.js"></script>
+    </head>
+    <body onload="load()" id="bg">
+        <!-- <script>
+            $('body').width(screen.width);
+            $('body').height(screen.height);
+        </script> -->
+        <div class="cursor" id="cursor">
+            <div class="cursorLight"></div>
+        </div>
+        <div id="home">
+            <div id="part_2">
+                <button class="btn_back" id="btn_back" onclick="home_in_1()"></button>
+                <h1 class="Title3">About Us</h1>
+                <div class="container1" id="container1">
+                    <div id="web">
+                        <p id="Text4">網頁開發組</p>
+                        <div class="member">
+                            <div class="member_photo"><img src="Images\Profiles\01.jpg" alt=""></div>
+                            <p class="member_name">資管一 黃晟銘</p>
+                            <p class="member_id">112213013</p>
+                        </div>
+                        <div class="member">
+                            <div class="member_photo"><img src="Images\Profiles\02.jpg" alt=""></div>
+                            <p class="member_name">土木四 林家麒</p>
+                            <p class="member_id">109322028</p>
+                        </div>
+                        <div class="member">
+                            <div class="member_photo"><img src="Images\Profiles\03.jpg" alt=""></div>
+                            <p class="member_name">管學三 侯楷言</p>
+                            <p class="member_id">110104001</p>
+                        </div>
+                    </div>
+                    <div id="ecash">
+                        <p id="Text4">E-cash組</p>
+                        <div class="member">
+                            <div class="member_photo"><img src="Images\Profiles\04.jpg" alt=""></div>
+                            <p class="member_name">資管一 黃亦婧</p>
+                            <p class="member_id">112213023</p>
+                        </div>
+                        <div class="member">
+                            <div class="member_photo"><img src="Images\Profiles\05.jpg" alt=""></div>
+                            <p class="member_name">資管一 林宣如</p>
+                            <p class="member_id">1122113033</p>
+                        </div>
+                        <div class="member">
+                            <div class="member_photo"><img src="Images\Profiles\06.jpg" alt=""></div>
+                            <p class="member_name">教院二 紀溢倫</p>
+                            <p class="member_id">111453024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container2" id="container2">
+                    <div class="cards" id="card1">
+                        <div class="card_img"></div>
+                        <h1 class="card_title">網頁開發組</h1>
+                        <p class="card_content">網頁開發組中共有三名成員，其中兩名成員各自撰寫框架後，再交由另一名成員撰寫網頁外觀與動畫</p>
+                    </div>
+                    <div class="cards" id="card2">
+                        <div class="card_img"></div>
+                        <h1 class="card_title">E-cash組</h1>
+                        <p class="card_content">E-cash組中共有三名成員...</p>
+                    </div>
+                    <div class="cards" id="card3"></div>
+                </div>
+                <button id="btn2" onclick="about_us_page1();" disabled>︿ prev</button>
+                <button id="btn3" onclick="about_us_page2();">﹀ next</button>
+                <button class="btn4" id="btn4" onclick="about_us_out()"></button>
+            </div>
+            <div id="obj6"></div>
+            <div id="obj7"></div>
+            <div id="obj8"></div>
+            <div id="obj9"></div>
+            <div id="obj10"></div>
+            <div id="obj11"></div>
+            <div id="obj12"></div>
+            <div id="obj13"></div>
+            <div id="obj14"></div>
+            <div id="obj15"></div>
+            
+            <div id="part_1">
+                <div class="nav" id="nav">
+                    <div class="logo">
+                        <div id="logo_icon"></div>
+                        <span id="logo_text">logo</span>
+                    </div>
+                    <div></div>
+                </div>
+                <h1 class="Title1"><span id="Text1">E</span>-cash introducti<em id="o"></em><span>o</span>n <br>with w<em id="e"><em id="e1"></em><em id="e2"></em></em><span id="Text3">e</span>b progr<em id="a"></em><span id="Text3">a</span>ming!</h1>
+                <h2 class="Title2">計概期中報告<br><br>2024.04.16</h2>
+                <button class="btn1" onclick="home_out_1()">Get Started > <span></span></button>
+            </div>
+            <div id="obj1"></div>
+            <div id="obj2"></div>
+            <div id="obj3"></div>
+            <div id="obj4"></div>
+            <div id="obj5"></div>
+            <div id="phone1"><img src="Images\Img1.png" alt=""></div>
+            <div id="part_3">
+                <button class="btn_back" id="btn5" onclick="about_us_in()"></button>
+                <div id="ch_g_1">
+                    <div class="chapters" id="ch1" onmouseenter="chapter1_hover1()" onmouseover="chapter1_hover1()" onmouseout="chapter1_hover2()">
+                        <div class="ch_bg" id="ch1_bg"></div>
+                        <h1 class="ch_title" id="ch1_title">Chapter01</h1>
+                        <h2 class="ch_subtitle" id="ch1_subtitle">區塊鏈介紹、發展、應用</h2>
+                        <div class="ch_icon" id="ch1_icon"><img src="Images\Img2.png" alt=""></div>
+                        <button class="btn_close" id="close1" onclick="chapter1_out()">X Close</button>
+                        <h1 class="ch_slide_1" id="ch1_slide_1">Chapter01</h1>
+                        <h1 class="ch_slide_2" id="ch1_slide_2">Chapter02</h1>
+                        <button class="ch_btn_next" id="ch_next1" onclick="ch1_to_2();">></button>
+                        <div class="ch_contents" id="ch1_content">
+                            <!-- 01 -->
+                            <div class="ch_content_classes" id="ch2_content_class1">
+                                <p>01　　E-cash 基本介紹</p>
+                                <div class="ch_content_btns_2" id="ch2_content_1_btn_2">一</div>
+                                <div class="ch_content_btns" id="ch2_content_1_btn" onclick="ch1_content_1();">一</div>
+                            </div>
+                            <div class="ch_contents_1" id="ch2_content_1">
+                                <div class="ch_contents_pages" id="ch2_content_1_page">
+                                    <div id="ch2_content_1_page1">
+                                        <p id="text1">E-cash 是一種在網絡上進行支付的數字貨幣形式<br><br>
+                                            可進行網絡購物、支付網絡服務費用等<br><br>
+                                            統一由機構發行，用戶可通過在其平台上創建帳戶或使用其他支付方式將實體貨幣兌換為電子貨幣<br><br>
+                                            這些電子貨幣在用戶之間的轉移是匿名且使用加密技術保護安全。
+                                    </p>
+                                        <div id="img1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 02 -->
+                            <div class="ch_content_classes" id="ch2_content_class2">
+                                <p>02　　Bitcoin 基本介紹</p>
+                                <div class="ch_content_btns_2" id="ch2_content_2_btn_2" onclick="ch1_content_2();">一</div>
+                                <div class="ch_content_btns" id="ch2_content_2_btn" onclick="ch1_content_2();">一</div>
+                            </div>
+                            <div class="ch_contents_2" id="ch2_content_2">
+                                <div class="ch_contents_pages" id="ch2_content_2_page">
+                                    <div id="ch2_content_2_pages_container">
+                                        <!-- p1 -->
+                                        <div id="ch1_content_2_page1">
+                                            <p id="text1">Bitcoin 是一種加密數位貨幣<br><br>
+                                                第一個利用區塊鏈產生的虛擬貨幣<br><br>
+                                                去中心化：不需透過中間人（銀行）來紀錄、保存交易，而是由所有用戶驗證及記錄交易
+                                            </p>
+                                            <div id="img1"></div>
+                                        </div>
+                                        <!-- p2 -->
+                                        <div id="ch1_content_2_page2">
+                                            <p id="text1">缺點：<br><br>
+                                                i.	價格波動大<br>
+                                                ii.	能源消耗：比特幣挖礦過程需要大量能源<br>
+                                                iii.	交易確認時間長、費用高
+                                            </p>
+                                        </div>
+                                        <div class="ch_content_pages_btns" id="ch1_content_2_page_btn1" onclick="ch1_content_2_pages_prev();"></div>
+                                        <div class="ch_content_pages_btns" id="ch1_content_2_page_btn2" onclick="ch1_content_2_pages_next();"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 03 -->
+                            <div class="ch_content_classes" id="ch2_content_class3">
+                                <p>03　　區塊鏈的相關應用</p>
+                                <div class="ch_content_btns_2" id="ch2_content_3_btn_2" onclick="ch1_content_3();">一</div>
+                                <div class="ch_content_btns" id="ch2_content_3_btn" onclick="ch1_content_3();">一</div>
+                            </div>
+                            <div class="ch_contents_3" id="ch2_content_3">
+                                <div class="ch_contents_pages" id="ch2_content_3_page">
+                                    <div id="ch2_content_3_pages_container">
+                                        <div id="ch2_content_3_page1">
+                                            <p id="text1">金融、供應鏈管理、智能合約、數據存儲、身份驗證、投票系統等各個領域</p>
+                                            <div id="img1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="readmore_box" id="readmore1">
+                            <button class="readmore" onclick="chapter1_in()">READ MORE ></button>
+                        </div>
+                    </div>
+                    <div class="chapters" id="ch2" onmouseenter="chapter2_hover1()" onmouseover="chapter2_hover1()" onmouseout="chapter2_hover2()">
+                        <div class="ch_bg" id="ch2_bg"></div>
+                        <h1 class="ch_title" id="ch2_title">Chapter02</h1>
+                        <h2 class="ch_subtitle" id="ch2_subtitle">E-cash & BitCoin 基本介紹</h2>
+                        <div class="ch_icon" id="ch2_icon"><img src="Images\Img3.png" alt=""></div>
+                        <button class="btn_close" id="close2" onclick="chapter2_out()">X Close</button>
+                        <h1 class="ch_slide_1" id="ch2_slide_1">Chapter02</h1>
+                        <h1 class="ch_slide_2" id="ch2_slide_2">Chapter03</h1>
+                        <button class="ch_btn_next" id="ch_next2" onclick="ch2_to_3();">></button>
+                        
+                        <div class="readmore_box" id="readmore2">
+                            <button class="readmore" onclick="chapter2_in()">READ MORE ></button>
+                        </div>
+                    </div>
+                    <div class="chapters" id="ch3" onmouseenter="chapter3_hover1()" onmouseover="chapter3_hover1()" onmouseout="chapter3_hover2()">
+                        <div class="ch_bg" id="ch3_bg"></div>
+                        <h1 class="ch_title" id="ch3_title">Chapter03</h1>
+                        <h2 class="ch_subtitle" id="ch3_subtitle">.......</h2>
+                        <div class="ch_icon" id="ch3_icon"><img src="Images\Img4.png" alt=""></div>
+                        <button class="btn_close" id="close3" onclick="chapter3_out()">X Close</button>
+                        <h1 class="ch_slide_1" id="ch3_slide_1">Chapter03</h1>
+                        <h1 class="ch_slide_2" id="ch3_slide_2">Chapter04</h1>
+                        <button class="ch_btn_next" id="ch_next3" onclick="ch3_to_4();">></button>
+                        <div class="readmore_box" id="readmore3" >
+                            <button class="readmore" onclick="chapter3_in()">READ MORE ></button>
+                        </div>
+                    </div>
+                    <button class="mask" id="mask1"></button>
+                </div>
+                <div id="ch_g_2">
+                    <div class="chapters" id="ch4" onmouseenter="chapter4_hover1()" onmouseover="chapter4_hover1()" onmouseout="chapter4_hover2()">
+                        <div class="ch_bg" id="ch4_bg"></div>
+                        <h1 class="ch_title" id="ch4_title">Chapter04</h1>
+                        <h2 class="ch_subtitle" id="ch4_subtitle">網頁開發基本介紹</h2>
+                        <div class="ch_icon" id="ch4_icon"><img src="Images\Img5.png" alt=""></div>
+                        <button class="btn_close" id="close4" onclick="chapter4_out()">X Close</button>
+                        <h1 class="ch_slide_1" id="ch4_slide_1">Chapter04</h1>
+                        <h1 class="ch_slide_2" id="ch4_slide_2">Chapter05</h1>
+                        <button class="ch_btn_next" id="ch_next4" onclick="ch4_to_5();">></button>
+                        <div class="readmore_box" id="readmore4">
+                            <button class="readmore" onclick="chapter4_in()">READ MORE ></button>
+                        </div>
+                    </div>
+                    <div class="chapters" id="ch5" onmouseenter="chapter5_hover1()" onmouseover="chapter5_hover1()" onmouseout="chapter5_hover2()">
+                        <div class="ch_bg" id="ch5_bg"></div>
+                        <h1 class="ch_title" id="ch5_title">Chapter05</h1>
+                        <h2 class="ch_subtitle" id="ch5_subtitle">網頁介紹2</h2>
+                        <div class="ch_icon" id="ch5_icon"><img src="Images\Img6.png" alt=""></div>
+                        <button class="btn_close" id="close5" onclick="chapter5_out()">X Close</button>
+                        <h1 class="ch_slide_1" id="ch5_slide_1">Chapter05</h1>
+                        <h1 class="ch_slide_2" id="ch5_slide_2">Chapter06</h1>
+                        <button class="ch_btn_next" id="ch_next5" onclick="ch5_to_6();">></button>
+                        <div class="readmore_box" id="readmore5">
+                            <button class="readmore" onclick="chapter5_in()">READ MORE ></button>
+                        </div>
+                    </div>
+                    <div class="chapters" id="ch6" onmouseenter="chapter6_hover1()" onmouseover="chapter6_hover1()" onmouseout="chapter6_hover2()">
+                        <div class="ch_bg" id="ch6_bg"></div>
+                        <h1 class="ch_title" id="ch6_title">Chapter06</h1>
+                        <h2 class="ch_subtitle" id="ch6_subtitle">網頁與 E-cash 的應用</h2>
+                        <div class="ch_icon" id="ch6_icon"><img src="Images\Img7.png" alt=""></div>
+                        <button class="btn_close" id="close6" onclick="chapter6_out()">X Close</button>
+                        <h1 class="ch_slide_1" id="ch6_slide_1">Chapter06</h1>
+                        <div class="readmore_box" id="readmore6">
+                            <button class="readmore" onclick="chapter6_in()">READ MORE ></button>
+                        </div>
+                    </div>
+                    <button class="mask" id="mask2"></button>
+                </div>
+                <button class="btn6" id="btn6" onclick="chapters_page_1(0)" disabled>< Prev</button>
+                <button class="btn7" id="btn7" onclick="chapters_page_2()">Next ></button>
+                
+            </div>
+        </div>
+        
+        
+        
+    </body>
+    <script>
+        let CursorLight = document.querySelector('.cursorLight')
+        let Cursor = document.querySelector('.cursor');
+        let member = document.querySelectorAll('.member');
+        let card = document.querySelectorAll('.cards');
+        let btn1 = document.querySelector('.btn1');
+        
+        
+
+        let index = 0
+        let cursor_type = 0
+        let click_type = 0
+        let ex = 0
+        let ey = 0
+        let vx = 0
+        let vy = 0
+        let x = 0
+        let y = 0
+
+        
+        window.addEventListener('mousemove',function(xyz){
+        
+            ex = xyz.x - Cursor.offsetLeft
+            ey = xyz.y - Cursor.offsetTop
+            if (cursor_color == 0){
+                    Cursor.style.border = '5px solid #383838';
+                }else{
+                    Cursor.style.border = '5px solid #afafaf';
+                }
+            index= 0
+        })
+
+        window.addEventListener('mousedown',function(xyz){
+            if(cursor_type == 0){
+                Cursor.style.scale = "0.8";
+            }
+            if(cursor_type != 0){
+            Cursor.style.scale = "0.95";
+            }
+            if(cursor_type == 1){
+            Cursor.style.scale = "0.985";
+            }
+            click_type = 0
+            let span = document.createElement('span');
+            span.classList.add('cursor_click');
+            document.body.appendChild(span);
+            setInterval(()=>{
+                if (click_type == 0){
+                span.style.top = Cursor.offsetTop + "px";
+                span.style.left = Cursor.offsetLeft + "px";
+                }
+                span.style.scale = '0.8';
+                if (cursor_color == 1){
+                    span.style.border = '5px solid rgba(175, 175, 175, 1)';
+                }
+                else{
+                    span.style.border = '5px solid rgba(56, 56, 56, 1)';
+                }
+            },0);
+
+            window.addEventListener('mousemove',function(xyz){
+                if (click_type == 0){
+                    span.style.top = Cursor.offsetTop + "px";
+                    span.style.left = Cursor.offsetLeft + "px";
+                }
+                
+            })
+            window.addEventListener('mouseup',function(xyz){
+                
+                span.style.scale = "1";
+                if (cursor_color == 0){
+                    Cursor.style.border = '5px solid #383838';
+                }else{
+                    Cursor.style.border = '5px solid #afafaf';
+                }
+                setTimeout(function(){click_type = 1;},0);
+                setTimeout(function(){span.style.animation = 'cursor_click 0.65s cubic-bezier(.6,0,.4,1)'},0);
+                setTimeout(function(){span.remove()},600);
+            })
+            member[0].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[0].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[1].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[1].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[2].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[2].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[3].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[3].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[4].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[4].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[5].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[5].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        card[0].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        card[0].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        card[1].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        card[1].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        btn1.addEventListener('mousemove',function(){
+            cursor_color = 1;
+        })
+        btn1.addEventListener('mouseout',function(){
+            cursor_color = 0;
+        })
+
+
+        })
+        window.addEventListener('mouseup',function(){
+            Cursor.style.scale = "1";
+        })
+        member[0].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[0].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[1].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[1].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[2].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[2].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[3].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[3].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[4].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[4].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        member[5].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        member[5].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        card[0].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        card[0].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        card[1].addEventListener('mousemove',function(){
+            cursor_color = 0;
+        })
+        card[1].addEventListener('mouseout',function(){
+            cursor_color = 1;
+        })
+        btn1.addEventListener('mousemove',function(){
+            cursor_color = 1;
+        })
+        btn1.addEventListener('mouseout',function(){
+            cursor_color = 0;
+        })
+        setInterval(()=>{
+        index++
+        if (cursor_type == 0 ){
+            if(index<10){
+            vx+=ex/10
+            vy+=ey/10
+        }
+            Cursor.style.width = "25px";
+            Cursor.style.height = "25px";
+            Cursor.style.borderRadius= "30px";
+            Cursor.style.zIndex = "99999999";
+            Cursor.style.left = vx+"px"
+            Cursor.style.top = vy+"px"
+            
+            
+            
+        }
+
+        
+    },0)
+    </script>
+</html>
