@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>計概報告</title>
+    <title>計算機概論期中報告</title>
         <link rel="stylesheet" href="CSS\main.css">
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="JS\main.js"></script>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="member">
                             <div class="member_photo"><img src="Images\Profiles\03.jpg" alt=""></div>
-                            <p class="member_name">管學三 侯楷言</p>
+                            <p class="member_name">管院三 侯楷言</p>
                             <p class="member_id">110104001</p>
                         </div>
                     </div>
@@ -58,14 +58,38 @@
                 </div>
                 <div class="container2" id="container2">
                     <div class="cards" id="card1">
-                        <div class="card_img"></div>
+                        <img src="Images\Img18.png" alt="" class="card_logo">
                         <h1 class="card_title">網頁開發組</h1>
                         <p class="card_content">網頁開發組中共有三名成員，其中兩名成員各自撰寫框架後，再交由另一名成員撰寫網頁外觀與動畫</p>
+                        <div class="card_mem">
+                            <div class="card_mem_photo" id="card_mem_photo3"><img src="Images\Profiles\03.jpg" alt=""></div>
+                            <div class="card_mem_photo" id="card_mem_photo2"><img src="Images\Profiles\02.jpg" alt=""></div>
+                            <div class="card_mem_photo" id="card_mem_photo1"><img src="Images\Profiles\01.jpg" alt=""></div>
+                        </div>
+                        <div class="card_pro">
+                            <div id="text1">Progress</div>
+                            <div id="text2">60%</div>
+                            <div class="card_pro_bar_bg">
+                                <div class="card_pro_bar_val" id="card1_pro_bar_val"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="cards" id="card2">
-                        <div class="card_img"></div>
+                        <img src="Images\Img19.png" alt="" class="card_logo">
                         <h1 class="card_title">E-cash組</h1>
-                        <p class="card_content">E-cash組中共有三名成員...</p>
+                        <p class="card_content">E-cash組的成員負責提供資料並根據網頁開發組提供的架構整理與彙整各資料</p>
+                        <div class="card_mem">
+                            <div class="card_mem_photo" id="card_mem_photo3"><img src="Images\Profiles\06.jpg" alt=""></div>
+                            <div class="card_mem_photo" id="card_mem_photo2"><img src="Images\Profiles\05.jpg" alt=""></div>
+                            <div class="card_mem_photo" id="card_mem_photo1"><img src="Images\Profiles\04.jpg" alt=""></div>
+                        </div>
+                        <div class="card_pro">
+                            <div id="text1">Progress</div>
+                            <div id="text2">80%</div>
+                            <div class="card_pro_bar_bg">
+                                <div class="card_pro_bar_val" id="card2_pro_bar_val"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="cards" id="card3"></div>
                 </div>
@@ -85,16 +109,15 @@
             <div id="obj15"></div>
             
             <div id="part_1">
-                <div class="nav" id="nav">
-                    <div class="logo">
-                        <div id="logo_icon"></div>
-                        <span id="logo_text">logo</span>
-                    </div>
-                    <div></div>
-                </div>
                 <h1 class="Title1"><span id="Text1">E</span>-cash introducti<em id="o"></em><span>o</span>n <br>with w<em id="e"><em id="e1"></em><em id="e2"></em></em><span id="Text3">e</span>b progr<em id="a"></em><span id="Text3">a</span>ming!</h1>
-                <h2 class="Title2">計概期中報告<br><br>2024.04.16</h2>
+                <h2 class="Title2">計算機概論期中報告 第十組<br>2024.04.16</h2>
                 <button class="btn1" onclick="home_out_1()">Get Started > <span></span></button>
+            </div>
+            <div class="nav" id="nav">
+                <div class="logo" id="logo" onclick="logo1();">
+                    <div id="logo_icon"><img src="Images\LOGO.png" alt="" style="height: 100%;"></div>
+                    <span id="logo_text">計概期中報告</span>
+                </div>
             </div>
             <div id="obj1"></div>
             <div id="obj2"></div>
@@ -108,7 +131,7 @@
                     <div class="chapters" id="ch1" onmouseenter="chapter1_hover1()" onmouseover="chapter1_hover1()" onmouseout="chapter1_hover2()">
                         <div class="ch_bg" id="ch1_bg"></div>
                         <h1 class="ch_title" id="ch1_title">Chapter01</h1>
-                        <h2 class="ch_subtitle" id="ch1_subtitle">區塊鏈介紹、發展、應用</h2>
+                        <h2 class="ch_subtitle" id="ch1_subtitle">區塊鏈的技術與應用</h2>
                         <div class="ch_icon" id="ch1_icon"><img src="Images\Img2.png" alt=""></div>
                         <button class="btn_close" id="close1" onclick="chapter1_out()">X Close</button>
                         <h1 class="ch_slide_1" id="ch1_slide_1">Chapter01</h1>
@@ -116,65 +139,70 @@
                         <button class="ch_btn_next" id="ch_next1" onclick="ch1_to_2();">></button>
                         <div class="ch_contents" id="ch1_content">
                             <!-- 01 -->
-                            <div class="ch_content_classes" id="ch2_content_class1">
-                                <p>01　　E-cash 基本介紹</p>
-                                <div class="ch_content_btns_2" id="ch2_content_1_btn_2">一</div>
-                                <div class="ch_content_btns" id="ch2_content_1_btn" onclick="ch1_content_1();">一</div>
+                            <div class="ch_content_classes" id="ch1_content_class1">
+                                <p>01　　區塊鏈的技術</p>
+                                <div class="ch_content_btns_2" id="ch1_content_1_btn_2">一</div>
+                                <div class="ch_content_btns" id="ch1_content_1_btn" onclick="ch1_content_1();">一</div>
                             </div>
-                            <div class="ch_contents_1" id="ch2_content_1">
-                                <div class="ch_contents_pages" id="ch2_content_1_page">
-                                    <div id="ch2_content_1_page1">
-                                        <p id="text1">E-cash 是一種在網絡上進行支付的數字貨幣形式<br><br>
-                                            可進行網絡購物、支付網絡服務費用等<br><br>
-                                            統一由機構發行，用戶可通過在其平台上創建帳戶或使用其他支付方式將實體貨幣兌換為電子貨幣<br><br>
-                                            這些電子貨幣在用戶之間的轉移是匿名且使用加密技術保護安全。
-                                    </p>
-                                        <div id="img1"></div>
+                            <div class="ch_contents_1" id="ch1_content_1">
+                                <div class="ch_contents_pages" id="ch1_content_1_page">
+                                    <div id="ch1_content_1_pages_container">
+
+                                        <div id="ch1_content_1_page1">
+                                            <p id="text1">分散式資料庫技術<br><br>
+                                                特性：安全、公開透明、不可竄改
+                                            </p>
+                                            <div id="img1"><img src="Images\Img9.png" alt="" style="height: 100%;"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- 02 -->
-                            <div class="ch_content_classes" id="ch2_content_class2">
-                                <p>02　　Bitcoin 基本介紹</p>
-                                <div class="ch_content_btns_2" id="ch2_content_2_btn_2" onclick="ch1_content_2();">一</div>
-                                <div class="ch_content_btns" id="ch2_content_2_btn" onclick="ch1_content_2();">一</div>
+                            <div class="ch_content_classes" id="ch1_content_class2">
+                                <p>02　　區塊鏈的核心概念</p>
+                                <div class="ch_content_btns_2" id="ch1_content_2_btn_2" onclick="ch1_content_2();">一</div>
+                                <div class="ch_content_btns" id="ch1_content_2_btn" onclick="ch1_content_2();">一</div>
                             </div>
-                            <div class="ch_contents_2" id="ch2_content_2">
-                                <div class="ch_contents_pages" id="ch2_content_2_page">
-                                    <div id="ch2_content_2_pages_container">
+                            <div class="ch_contents_2" id="ch1_content_2">
+                                <div class="ch_contents_pages" id="ch1_content_2_page">
+                                    <div id="ch1_content_2_pages_container">
+                                        
                                         <!-- p1 -->
                                         <div id="ch1_content_2_page1">
-                                            <p id="text1">Bitcoin 是一種加密數位貨幣<br><br>
-                                                第一個利用區塊鏈產生的虛擬貨幣<br><br>
-                                                去中心化：不需透過中間人（銀行）來紀錄、保存交易，而是由所有用戶驗證及記錄交易
-                                            </p>
-                                            <div id="img1"></div>
+                                            <div class="ch_cards" id="ch_card1">
+                                                <img src="Images\Img10.png" alt="">
+                                                <p>分散式紀錄</p>
+                                            </div>
+                                            <div class="ch_cards" id="ch_card2">
+                                                <img src="Images\Img11.png" alt="">
+                                                <p>區塊</p>
+                                            </div>
+                                            <div class="ch_cards" id="ch_card3">
+                                                <img src="Images\Img12.png" alt="">
+                                                <p>加密</p>
+                                            </div>
+                                            <div class="ch_cards" id="ch_card4">
+                                                <img src="Images\Img13.png" alt="">
+                                                <p>共識機制</p>
+                                            </div>
                                         </div>
-                                        <!-- p2 -->
-                                        <div id="ch1_content_2_page2">
-                                            <p id="text1">缺點：<br><br>
-                                                i.	價格波動大<br>
-                                                ii.	能源消耗：比特幣挖礦過程需要大量能源<br>
-                                                iii.	交易確認時間長、費用高
-                                            </p>
-                                        </div>
-                                        <div class="ch_content_pages_btns" id="ch1_content_2_page_btn1" onclick="ch1_content_2_pages_prev();"></div>
-                                        <div class="ch_content_pages_btns" id="ch1_content_2_page_btn2" onclick="ch1_content_2_pages_next();"></div>
+                                        <!-- <div class="ch_content_pages_btns" id="ch1_content_2_page_btn1" onclick="ch1_content_2_pages_prev();"></div>
+                                        <div class="ch_content_pages_btns" id="ch1_content_2_page_btn2" onclick="ch1_content_2_pages_next();"></div> -->
                                     </div>
                                 </div>
                             </div>
                             <!-- 03 -->
-                            <div class="ch_content_classes" id="ch2_content_class3">
+                            <div class="ch_content_classes" id="ch1_content_class3">
                                 <p>03　　區塊鏈的相關應用</p>
-                                <div class="ch_content_btns_2" id="ch2_content_3_btn_2" onclick="ch1_content_3();">一</div>
-                                <div class="ch_content_btns" id="ch2_content_3_btn" onclick="ch1_content_3();">一</div>
+                                <div class="ch_content_btns_2" id="ch1_content_3_btn_2" onclick="ch1_content_3();">一</div>
+                                <div class="ch_content_btns" id="ch1_content_3_btn" onclick="ch1_content_3();">一</div>
                             </div>
-                            <div class="ch_contents_3" id="ch2_content_3">
-                                <div class="ch_contents_pages" id="ch2_content_3_page">
-                                    <div id="ch2_content_3_pages_container">
-                                        <div id="ch2_content_3_page1">
+                            <div class="ch_contents_3" id="ch1_content_3">
+                                <div class="ch_contents_pages" id="ch1_content_3_page">
+                                    <div id="ch1_content_3_pages_container">
+                                        <div id="ch1_content_3_page1">
                                             <p id="text1">金融、供應鏈管理、智能合約、數據存儲、身份驗證、投票系統等各個領域</p>
-                                            <div id="img1"></div>
+                                            <div id="img1"><img src="Images\Img14.png" alt="" style="height: 100%;"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -193,7 +221,59 @@
                         <h1 class="ch_slide_1" id="ch2_slide_1">Chapter02</h1>
                         <h1 class="ch_slide_2" id="ch2_slide_2">Chapter03</h1>
                         <button class="ch_btn_next" id="ch_next2" onclick="ch2_to_3();">></button>
-                        
+                        <div class="ch_contents" id="ch2_content">
+                            <!-- 01 -->
+                            <div class="ch_content_classes" id="ch2_content_class1">
+                                <p>01　　E-Cash 基本介紹</p>
+                                <div class="ch_content_btns_2" id="ch2_content_1_btn_2">一</div>
+                                <div class="ch_content_btns" id="ch2_content_1_btn" onclick="ch2_content_1();">一</div>
+                            </div>
+                            <div class="ch_contents_1" id="ch2_content_1">
+                                <div class="ch_contents_pages" id="ch2_content_1_page">
+                                    <div id="ch2_content_1_pages_container">
+
+                                        <div id="ch2_content_1_page1">
+                                            <p id="text1">E-Cash 是一種在網絡上進行支付的數字貨幣形式<br><br>
+                                                將實體貨幣兌換為電子貨幣<br><br>
+                                                匿名、使用加密技術保護安全。
+                                            </p>
+                                            <div id="img1"><img src="Images\Img15.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 02 -->
+                            <div class="ch_content_classes" id="ch2_content_class2">
+                                <p>02　　Bitcoin 是什麼？</p>
+                                <div class="ch_content_btns_2" id="ch2_content_2_btn_2" onclick="ch2_content_2();">一</div>
+                                <div class="ch_content_btns" id="ch2_content_2_btn" onclick="ch2_content_2();">一</div>
+                            </div>
+                            <div class="ch_contents_2" id="ch2_content_2">
+                                <div class="ch_contents_pages" id="ch2_content_2_page">
+                                    <div id="ch2_content_2_pages_container">
+                                        <!-- p1 -->
+                                        <div id="ch2_content_2_page1">
+                                            <p id="text1">BitCoin 是一種加密數位貨幣<br><br>
+                                                有限供應<br><br>
+                                                去中心化
+                                            </p>
+                                            <div id="img1"><img src="Images\Img16.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- p2 -->
+                                        <div id="ch2_content_2_page2">
+                                            <p id="text1">缺點：<br><br>
+                                                i.	價格波動大<br>
+                                                ii.	能源消耗問題<br>
+                                                iii.	可擴展性問題
+                                            </p>
+                                            <div id="img1"><img src="Images\Img17.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <div class="ch_content_pages_btns" id="ch2_content_2_page_btn1" onclick="ch2_content_2_pages_prev();"></div>
+                                        <div class="ch_content_pages_btns" id="ch2_content_2_page_btn2" onclick="ch2_content_2_pages_next();"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="readmore_box" id="readmore2">
                             <button class="readmore" onclick="chapter2_in()">READ MORE ></button>
                         </div>
@@ -201,12 +281,138 @@
                     <div class="chapters" id="ch3" onmouseenter="chapter3_hover1()" onmouseover="chapter3_hover1()" onmouseout="chapter3_hover2()">
                         <div class="ch_bg" id="ch3_bg"></div>
                         <h1 class="ch_title" id="ch3_title">Chapter03</h1>
-                        <h2 class="ch_subtitle" id="ch3_subtitle">.......</h2>
+                        <h2 class="ch_subtitle" id="ch3_subtitle">技術基礎&各國監管法規</h2>
                         <div class="ch_icon" id="ch3_icon"><img src="Images\Img4.png" alt=""></div>
                         <button class="btn_close" id="close3" onclick="chapter3_out()">X Close</button>
                         <h1 class="ch_slide_1" id="ch3_slide_1">Chapter03</h1>
                         <h1 class="ch_slide_2" id="ch3_slide_2">Chapter04</h1>
                         <button class="ch_btn_next" id="ch_next3" onclick="ch3_to_4();">></button>
+                        <div class="ch_contents" id="ch3_content">
+                            <!-- 01 -->
+                            <div class="ch_content_classes" id="ch3_content_class1">
+                                <p>01　　彼特幣& E-Cash 相關技術基礎</p>
+                                <div class="ch_content_btns_2" id="ch3_content_1_btn_2">一</div>
+                                <div class="ch_content_btns" id="ch3_content_1_btn" onclick="ch3_content_1();">一</div>
+                            </div>
+                            <div class="ch_contents_1" id="ch3_content_1">
+                                <div class="ch_contents_pages" id="ch3_content_1_page">
+                                    <div id="ch3_content_1_pages_container">
+                                        <!-- p1 -->
+                                        <div id="ch3_content_1_page1">
+                                            <p id="text1">彼特幣技術基礎：<br><br>
+                                                區塊鏈技術<br>
+                                                挖礦
+                                            </p>
+                                            <div id="img1"><img src="Images\Img20.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- p2 -->
+                                        <div id="ch3_content_1_page2">
+                                            <p id="text1">密碼學：<br><br>
+                                                數字簽名<br>
+                                                哈希函數
+                                            </p>
+                                            <div id="img1"><img src="Images\Img21.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- p3 -->
+                                        <div id="ch3_content_1_page3">
+                                            <p id="text1">分散式網路：<br><br>
+                                                節點<br>
+                                                去中心化
+                                            </p>
+                                            <div id="img1"><img src="Images\Img22.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- p4 -->
+                                        <div id="ch3_content_1_page4">
+                                            <p id="text1">E-Cash 技術基礎：<br><br>
+                                                加密技術<br>
+                                                安全協議
+                                            </p>
+                                            <div id="img1"><img src="Images\Img23.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- p5 -->
+                                        <div id="ch3_content_1_page5">
+                                            <p id="text1">交易處理：<br><br>
+                                                支付系統<br>
+                                                匿名性
+                                            </p>
+                                            <div id="img1"><img src="Images\Img24.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <div class="ch_content_pages_btns" id="ch3_content_1_page_btn1" onclick="ch3_content_1_pages_prev();"></div>
+                                        <div class="ch_content_pages_btns" id="ch3_content_1_page_btn2" onclick="ch3_content_1_pages_next();"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 02 -->
+                            <div class="ch_content_classes" id="ch3_content_class2">
+                                <p>02　　各國虛擬貨幣政策</p>
+                                <div class="ch_content_btns_2" id="ch3_content_2_btn_2" onclick="ch3_content_2();">一</div>
+                                <div class="ch_content_btns" id="ch3_content_2_btn" onclick="ch3_content_2();">一</div>
+                            </div>
+                            <div class="ch_contents_2" id="ch3_content_2">
+                                <div class="ch_contents_pages" id="ch3_content_2_page">
+                                    <div id="ch3_content_2_pages_container">
+                                        <!-- p1 -->
+                                        <div id="ch3_content_2_page1">
+                                            <p id="text1">中華民國：<br><br>
+                                                金管會要求虛擬資產服務提供商（VASPs）遵循反洗錢法金管銀法規(第11002720401號)<br><br>
+                                                台灣正致力於制定更全面的規範，預計於2024年9月提出
+                                            </p>
+                                            <div id="img1"><img src="Images\Img25.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- p2 -->
+                                        <div id="ch3_content_2_page2">
+                                            <p id="text1">中華人民共和國：<br><br>
+                                                禁止交易<br>
+                                                禁止海外平台交易<br>
+                                                法規執行嚴格
+                                            </p>
+                                            <div id="img1"><img src="Images\Img26.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- p3 -->
+                                        <div id="ch3_content_2_page3">
+                                            <p id="text1">歐盟：<br><br>
+                                                2024年起，MiCA (市場中的加密資產規範) 在歐盟生效，建立統一的加密資產市場監管框架。
+                                            </p>
+                                            <div id="img1"><img src="Images\Img27.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <div class="ch_content_pages_btns" id="ch3_content_2_page_btn1" onclick="ch3_content_2_pages_prev();"></div>
+                                        <div class="ch_content_pages_btns" id="ch3_content_2_page_btn2" onclick="ch3_content_2_pages_next();"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 03 -->
+                            <div class="ch_content_classes" id="ch3_content_class3">
+                                <p>03　　各國 E-Cash 相關政策</p>
+                                <div class="ch_content_btns_2" id="ch3_content_3_btn_2" onclick="ch3_content_3();">一</div>
+                                <div class="ch_content_btns" id="ch3_content_3_btn" onclick="ch3_content_3();">一</div>
+                            </div>
+                            <div class="ch_contents_3" id="ch3_content_3">
+                                <div class="ch_contents_pages" id="ch3_content_3_page">
+                                    <div id="ch3_content_3_pages_container">
+                                        <!-- p1 -->
+                                        <div id="ch3_content_3_page1">
+                                            <p id="text1">中華民國：<br><br>
+                                                金管會公布「管理虛擬資產平台及交易業務事業（VASP）指導原則」：<br><br>
+                                                i.  虛擬資產發行面管理<br>
+                                                ii. 虛擬資產上下架之審查機制 <br>
+                                                iii.    平台資產與客戶資產之分離保管
+                                            </p>
+                                            <div id="img1"><img src="Images\Img28.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- p2 -->
+                                        <div id="ch3_content_3_page2">
+                                            <p id="text1">美國：<br><br>
+                                                美國國會曾提出「ECASH」法案，意在推動數字美元的開發，這一舉措被看作是提升金融系統數字化和普及性的重要步驟。
+                                            </p>
+                                            
+                                            <div id="img1"><img src="Images\Img29.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <div class="ch_content_pages_btns" id="ch3_content_3_page_btn1" onclick="ch3_content_3_pages_prev();"></div>
+                                        <div class="ch_content_pages_btns" id="ch3_content_3_page_btn2" onclick="ch3_content_3_pages_next();"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="readmore_box" id="readmore3" >
                             <button class="readmore" onclick="chapter3_in()">READ MORE ></button>
                         </div>
@@ -223,19 +429,152 @@
                         <h1 class="ch_slide_1" id="ch4_slide_1">Chapter04</h1>
                         <h1 class="ch_slide_2" id="ch4_slide_2">Chapter05</h1>
                         <button class="ch_btn_next" id="ch_next4" onclick="ch4_to_5();">></button>
+                        <div class="ch_contents" id="ch4_content">
+                            <!-- 01 -->
+                            <div class="ch_content_classes" id="ch4_content_class1">
+                                <p>01　　網站需求了解</p>
+                                <div class="ch_content_btns_2" id="ch4_content_1_btn_2">一</div>
+                                <div class="ch_content_btns" id="ch4_content_1_btn" onclick="ch4_content_1();">一</div>
+                            </div>
+                            <div class="ch_contents_1" id="ch4_content_1">
+                                <div class="ch_contents_pages" id="ch4_content_1_page">
+                                    <div id="ch4_content_1_pages_container">
+    
+                                        <div id="ch4_content_1_page1">
+                                            <p id="text1">需求分析：進行市場調查和目標客群分析。<br><br>
+                                                網站架構規劃：草擬架構、如何導航、需考慮SEO。<br><br>
+                                                UI/UX設計：著重在使用者體驗，使用工具　EX:Figma。
+                                            </p>
+                                            <div id="img1"><img src="Images\Img30.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 02 -->
+                            <div class="ch_content_classes" id="ch4_content_class2">
+                                <p>02　　設計、切版</p>
+                                <div class="ch_content_btns_2" id="ch4_content_2_btn_2" onclick="ch4_content_2();">一</div>
+                                <div class="ch_content_btns" id="ch4_content_2_btn" onclick="ch4_content_2();">一</div>
+                            </div>
+                            <div class="ch_contents_2" id="ch4_content_2">
+                                <div class="ch_contents_pages" id="ch4_content_2_page">
+                                    <div id="ch4_content_2_pages_container">
+                                        <!-- p1 -->
+                                        <div id="ch4_content_2_page1">
+                                            <p id="text1">使用工具：使用Figma、Sketch、AdobeXD等等協作工具<br><br>
+                                                響應式設計：使用Bootstrap，在不同螢幕尺寸的平台都能彈性調整介面<br><br>
+                                                切版：將設計轉換成程式碼，把網頁的架構寫好。
+                                            </p>
+                                            <div id="img1"><img src="Images\Img31.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- <div class="ch_content_pages_btns" id="ch4_content_2_page_btn1"
+                                            onclick="ch4_content_2_pages_prev();"></div>
+                                        <div class="ch_content_pages_btns" id="ch4_content_2_page_btn2"
+                                            onclick="ch4_content_2_pages_next();"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 03 -->
+                            <div class="ch_content_classes" id="ch4_content_class3">
+                                <p>03　　開發(coding)</p>
+                                <div class="ch_content_btns_2" id="ch4_content_3_btn_2" onclick="ch4_content_3();">一</div>
+                                <div class="ch_content_btns" id="ch4_content_3_btn" onclick="ch4_content_3();">一</div>
+                            </div>
+                            <div class="ch_contents_3" id="ch4_content_3">
+                                <div class="ch_contents_pages" id="ch4_content_3_page">
+                                    <div id="ch4_content_3_pages_container">
+                                        <!-- p1 -->
+                                        <div id="ch4_content_3_page1">
+                                            <p id="text1">前端開發(frontend):呈現網頁的介面動態效果，常見框架：Angular、vue、React<br><br>
+                                                後端開發(backend):處理網站背後較複雜的資料，與前端用API溝通.Net(C#)、python(dango)、PHP。
+    
+    
+                                            </p>
+                                            <div id="img1"><img src="Images\Img32.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="readmore_box" id="readmore4">
                             <button class="readmore" onclick="chapter4_in()">READ MORE ></button>
                         </div>
                     </div>
-                    <div class="chapters" id="ch5" onmouseenter="chapter5_hover1()" onmouseover="chapter5_hover1()" onmouseout="chapter5_hover2()">
+                    <div class="chapters" id="ch5" onmouseenter="chapter5_hover1()" onmouseover="chapter5_hover1()"
+                        onmouseout="chapter5_hover2()">
                         <div class="ch_bg" id="ch5_bg"></div>
                         <h1 class="ch_title" id="ch5_title">Chapter05</h1>
-                        <h2 class="ch_subtitle" id="ch5_subtitle">網頁介紹2</h2>
+                        <h2 class="ch_subtitle" id="ch5_subtitle">網頁開發介紹(2)</h2>
                         <div class="ch_icon" id="ch5_icon"><img src="Images\Img6.png" alt=""></div>
                         <button class="btn_close" id="close5" onclick="chapter5_out()">X Close</button>
                         <h1 class="ch_slide_1" id="ch5_slide_1">Chapter05</h1>
                         <h1 class="ch_slide_2" id="ch5_slide_2">Chapter06</h1>
                         <button class="ch_btn_next" id="ch_next5" onclick="ch5_to_6();">></button>
+                        <div class="ch_contents" id="ch5_content">
+                            <!-- 01 -->
+                            <div class="ch_content_classes" id="ch5_content_class1">
+                                <p>01　　前後端如何溝通</p>
+                                <div class="ch_content_btns_2" id="ch5_content_1_btn_2">一</div>
+                                <div class="ch_content_btns" id="ch5_content_1_btn" onclick="ch5_content_1();">一</div>
+                            </div>
+                            <div class="ch_contents_1" id="ch5_content_1">
+                                <div class="ch_contents_pages" id="ch5_content_1_page">
+                                    <div id="ch5_content_1_pages_container">
+    
+                                        <div id="ch5_content_1_page1">
+                                            <p id="text1">資料庫：儲存、檢索資料，常見的有：Mysql、MongoDB、MariaDB。<br><br>
+                                                前端發送Request，後端利用API將Response回傳，前端顯示
+                                            </p>
+                                            <div id="img1"><img src="Images\Img33.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 02 -->
+                            <div class="ch_content_classes" id="ch5_content_class2">
+                                <p>02　　部屬與測試</p>
+                                <div class="ch_content_btns_2" id="ch5_content_2_btn_2" onclick="ch5_content_2();">一</div>
+                                <div class="ch_content_btns" id="ch5_content_2_btn" onclick="ch5_content_2();">一</div>
+                            </div>
+                            <div class="ch_contents_2" id="ch5_content_2">
+                                <div class="ch_contents_pages" id="ch5_content_2_page">
+                                    <div id="ch5_content_2_pages_container">
+                                        <!-- p1 -->
+                                        <div id="ch5_content_2_page1">
+                                            <p id="text1">測試：功能測試、兼容性測試和SEO優化測試<br><br>
+                                                架Server：在本機架server(Linux)雲端服務如AWS、GCP、Azure。<br><br>
+                                                持續維護：定期更新內容、監控性能、修復漏洞，根據用戶反饋優化
+    
+                                            </p>
+                                            <div id="img1"><img src="Images\Img34.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- <div class="ch_content_pages_btns" id="ch5_content_2_page_btn1"
+                                            onclick="ch5_content_2_pages_prev();"></div>
+                                        <div class="ch_content_pages_btns" id="ch5_content_2_page_btn2"
+                                            onclick="ch5_content_2_pages_next();"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 03 -->
+                            <div class="ch_content_classes" id="ch5_content_class3">
+                                <p>03　　共同協作工具</p>
+                                <div class="ch_content_btns_2" id="ch5_content_3_btn_2" onclick="ch5_content_3();">一</div>
+                                <div class="ch_content_btns" id="ch5_content_3_btn" onclick="ch5_content_3();">一</div>
+                            </div>
+                            <div class="ch_contents_3" id="ch5_content_3">
+                                <div class="ch_contents_pages" id="ch5_content_3_page">
+                                    <div id="ch5_content_3_pages_container">
+                                        <div id="ch5_content_3_page1">
+                                            <p id="text1">版控工具：專案多人開發、且需要不同版本測試 e.g. git、github、gitlab、sourcetree<br><br>
+                                                版控工具基本功能：push、pull、commit、merge。<br><br>
+    
+                                            </p>
+                                            <div id="img1"><img src="Images\Img35.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="readmore_box" id="readmore5">
                             <button class="readmore" onclick="chapter5_in()">READ MORE ></button>
                         </div>
@@ -243,10 +582,71 @@
                     <div class="chapters" id="ch6" onmouseenter="chapter6_hover1()" onmouseover="chapter6_hover1()" onmouseout="chapter6_hover2()">
                         <div class="ch_bg" id="ch6_bg"></div>
                         <h1 class="ch_title" id="ch6_title">Chapter06</h1>
-                        <h2 class="ch_subtitle" id="ch6_subtitle">網頁與 E-cash 的應用</h2>
+                        <h2 class="ch_subtitle" id="ch6_subtitle">作品展示與期末展望</h2>
                         <div class="ch_icon" id="ch6_icon"><img src="Images\Img7.png" alt=""></div>
                         <button class="btn_close" id="close6" onclick="chapter6_out()">X Close</button>
                         <h1 class="ch_slide_1" id="ch6_slide_1">Chapter06</h1>
+                        <div class="ch_contents" id="ch6_content">
+                            <!-- 01 -->
+                            <div class="ch_content_classes" id="ch6_content_class1">
+                                <p>01　　簡易APP開發</p>
+                                <div class="ch_content_btns_2" id="ch6_content_1_btn_2">一</div>
+                                <div class="ch_content_btns" id="ch6_content_1_btn" onclick="ch6_content_1();">一</div>
+                            </div>
+                            <div class="ch_contents_1" id="ch6_content_1">
+                                <div class="ch_contents_pages" id="ch6_content_1_page">
+                                    <div id="ch6_content_1_pages_container">
+
+                                        <div id="ch6_content_1_page1">
+                                            <p id="text1">使用 IDE:Xcode13 搭配 Swift 語言開發<br><br>
+                                                Swift 是一款專門為iOS系統設計的語言，特色很易讀且自由很大<br><br>
+                                                這次用Swift設計一款app，模擬虛擬股票的投資以及買賣
+                                            </p>
+                                            <div id="img1"><img src="Images\Img36.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 02 -->
+                            <div class="ch_content_classes" id="ch6_content_class2">
+                                <p>02　　期中反思</p>
+                                <div class="ch_content_btns_2" id="ch6_content_2_btn_2" onclick="ch6_content_2();">一</div>
+                                <div class="ch_content_btns" id="ch6_content_2_btn" onclick="ch6_content_2();">一</div>
+                            </div>
+                            <div class="ch_contents_2" id="ch6_content_2">
+                                <div class="ch_contents_pages" id="ch6_content_2_page">
+                                    <div id="ch6_content_2_pages_container">
+                                        <!-- p1 -->
+                                        <div id="ch6_content_2_page1">
+                                            <p id="text1">網頁無響應式：剛開始設計網頁時沒考慮到響應式，所以在不同介面開啟會跑掉。<br><br>
+                                                雖然製作過程很辛苦但收穫滿滿的成就感
+                                            </p>
+                                            <div id="img1"><img src="Images\Img37.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                        <!-- <div class="ch_content_pages_btns" id="ch6_content_2_page_btn1" onclick="ch6_content_2_pages_prev();"></div>
+                                        <div class="ch_content_pages_btns" id="ch6_content_2_page_btn2" onclick="ch6_content_2_pages_next();"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 03 -->
+                            <div class="ch_content_classes" id="ch6_content_class3">
+                                <p>03　　期末預期目標</p>
+                                <div class="ch_content_btns_2" id="ch6_content_3_btn_2" onclick="ch6_content_3();">一</div>
+                                <div class="ch_content_btns" id="ch6_content_3_btn" onclick="ch6_content_3();">一</div>
+                            </div>
+                            <div class="ch_contents_3" id="ch6_content_3">
+                                <div class="ch_contents_pages" id="ch6_content_3_page">
+                                    <div id="ch6_content_3_pages_container">
+                                        <div id="ch6_content_3_page1">
+                                            <p id="text1">APP功能完善：<br><br>
+                                                增加自動匯率、模擬模式等
+                                            </p>
+                                            <div id="img1"><img src="Images\Img38.png" alt="" style="height: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="readmore_box" id="readmore6">
                             <button class="readmore" onclick="chapter6_in()">READ MORE ></button>
                         </div>
